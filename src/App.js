@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <div className='app-body'>
         <div className='inputs'>
@@ -13,11 +13,11 @@ function App() {
           <div className='select-region'>
 <select>
   <option>All</option>
-  <option>All</option>
-  <option>All</option>
-  <option>All</option>
-  <option>All</option>
-  <option>All</option>
+  <option>Africa</option>
+  <option>Americas</option>
+  <option>Asia</option>
+  <option>Europe</option>
+  <option>Oceania</option>
 </select>
           </div>
         </div>
