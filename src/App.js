@@ -1,5 +1,6 @@
 import Header from './Header';
 import './App.css';
+import Country from './Country';
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
   <option>Oceania</option>
 </select>
           </div>
+        </div>
+
+        <div className='countries'>
+        <Country />
         </div>
       </div>
     </div>
