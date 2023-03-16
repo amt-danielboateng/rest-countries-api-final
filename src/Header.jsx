@@ -8,8 +8,11 @@ const Header = () => {
     <div className="header-container">
     <h2 className="logo">Where in the world?</h2>
     
-    <div className="switch-mode"></div>
-    < i className='fas fa-moon'><h3>Dark Mode</h3></i>
+    <div className="switch-mode">
+    < i className='fas fa-moon'></i>
+    <h3>Dark Mode</h3>
+    </div>
+   
     </div>
     
 </div>
