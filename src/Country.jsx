@@ -1,8 +1,8 @@
 import React from "react";
 
-const Country = () => {
+const Country = ({darkMode}) => {
 
-return <div className="country">
+return <div className={`country ${darkMode ? 'darkMode': ""}`}>
 <div className="flag-container">
 <img src="https://flagcdn.com/as.svg" alt="" />
 </div>
@@ -10,15 +10,15 @@ return <div className="country">
 <div className="details">
 <h3 className="name">Name</h3>
 <p>Population: {" "}
-    <span className="values">Test</span>
+    <span className={`values ${darkMode ? 'darkMode': ""}`}>Test</span>
 </p>
 
 <p>Region: {" "}
-    <span className="values">Test</span>
+    <span className={`values ${darkMode ? 'darkMode': ""}`}>Test</span>
 </p>
 
 <p>Capital: {" "}
-    <span className="values">Test</span>
+    <span className={`values ${darkMode ? 'darkMode': ""}`}>Test</span>
 </p>
 
 

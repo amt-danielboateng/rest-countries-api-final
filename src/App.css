@@ -13,6 +13,11 @@
   height: 100%;
 }
 
+.app.darkMode {
+  background-color: var(--dark-mode-bg);
+  color: var(--light-mode-elements);
+}
+
 .app-body {
   margin: 15px auto 0;
   padding: 15px;
@@ -23,6 +28,11 @@
   padding: 15px;
   background-color: var(--light-mode-bg);
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header.darkMode {
+  background-color: var(--dark-mode-bg);
+  color: var(--light-mode-elements);
 }
 
 .header-container {
@@ -59,11 +69,21 @@
   gap: 5px;
 }
 
+.search-input.darkMode {
+  background-color: var(--dark-mode-bg);
+  color: var(--light-mode-elements);
+}
+
 .search-input input {
   border: 0;
   background-color: transparent;
   outline: none;
   font-size: 18px;
+}
+
+.search-input.darkMode input {
+  background-color: var(--dark-mode-bg);
+  color: var(--light-mode-elements);
 }
 
 .select-region {
@@ -81,6 +101,24 @@
   background-color: transparent;
   border: none;
   outline: none;
+}
+
+.select-region.darkMode {
+  background-color: var(--dark-mode-bg);
+  color: var(--light-mode-elements);
+}
+
+.select-region.darkMode select {
+  color: var(--light-mode-elements);
+}
+
+.select-region.darkMode option {
+  background-color: var(--dark-mode-bg);
+  color: var(--light-mode-elements);
+}
+
+.search-input.darkMode input::placeholder {
+  color: var(--light-mode-elements);
 }
 
 .countries {
@@ -102,6 +140,11 @@
   cursor: pointer;
 }
 
+.country.darkMode {
+  background-color: var(--dark-mode-bg);
+  color: var(--light-mode-elements);
+}
+
 .country .flag-container {
   height: 170px;
   width: 100%;
@@ -119,6 +162,10 @@
 
 .country .values {
   color: gray;
+}
+
+.country .values.darkMode {
+  color: lightgray;
 }
 
 .country .details {
@@ -152,6 +199,11 @@ padding: 15px;
   cursor: pointer;
 }
 
+.back.darkMode {
+  background-color: var(--dark-mode-bg);
+  color: var(--light-mode-elements);
+}
+
 .country-details-body {
   margin: 15px auto 0;
   padding: 15px;
@@ -175,6 +227,10 @@ padding: 15px;
   flex: 0.5;
 }
 
+.info.darkMode {
+  color: var(--light-mode-elements);
+}
+
 .info-container {
   display: flex;
   justify-content: space-between;
@@ -190,11 +246,58 @@ padding: 15px;
   color: gray;
 }
 
+.info .values.darkMode {
+  color: lightgray;
+}
+
 .border-country {
-  padding: 10px;
+  padding: 5px 10px;
   background-color: var(--light-mode-bg);
   display: inline-block;
   margin: 10px;
   cursor: pointer;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.border-country.darkMode {
+  background-color: var(--dark-mode-bg);
+  color: var(--light-mode-elements);
+}
+
+@media (max-width: 800px) {
+  .country-details-body {
+    flex-direction: column;
+  }
+
+.info-container {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.left-info {
+  margin-bottom: 20px;
+}
+
+}
+
+@media (max-width: 720px) {
+  .inputs {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .search-input {
+    margin-bottom: 20px;
+  }
+
+  .switch-mode {
+    font-size: 12px;
+    flex: 0.5;
+    justify-content: flex-end;
+  }
+
+  .logo {
+    flex: 0.5;
+    font-size: 17px;
+  }
 }

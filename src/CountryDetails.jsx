@@ -1,11 +1,11 @@
 import React from 'react';
 
-const CountryDetails = () => {
+const CountryDetails = ({darkMode}) => {
 
 return (
     <div className='country-details'>
-<button className=' back'>
-<i class="fa fa-arrow-left" aria-hidden="true">
+<button className={`back ${darkMode ? 'darkMode': ""}`}>
+<i className="fa fa-arrow-left" aria-hidden="true">
 Go Back
 </i>
 </button>
@@ -20,48 +20,48 @@ Go Back
 <div className='info-container'>
 <div className='left-info'>
     <p>Native Name:{" "}
-    <span className='values'>Test</span>
+    <span className={`values ${darkMode ? 'darkMode': ""}`}>Test</span>
     </p>
 
     <p>Population:{" "}
-    <span className='values'>Test</span>
+    <span className={`values ${darkMode ? 'darkMode': ""}`}>Test</span>
     </p>
 
     <p>Region:{" "}
-    <span className='values'>Test</span>
+    <span className={`values ${darkMode ? 'darkMode': ""}`}>Test</span>
     </p>
 
     <p>Sub-region:{" "}
-    <span className='values'>Test</span>
+    <span className={`values ${darkMode ? 'darkMode': ""}`}>Test</span>
     </p>
 </div>
 <div className='right-info'>
 <p>Capital:{" "}
-    <span className='values'>Test</span>
+    <span className={`values ${darkMode ? 'darkMode': ""}`}>Test</span>
     </p>
 
     <p>Top-level Domain:{" "}
-    <span className='values'>Test</span>
+    <span className={`values ${darkMode ? 'darkMode': ""}`}>Test</span>
     </p>
 
     <p>Currencies:{" "}
-    <span className='values'>Test</span>
+    <span className={`values ${darkMode ? 'darkMode': ""}`}>Test</span>
     </p>
 
     <p>Languages:{" "}
-    <span className='values'>Test</span>
+    <span className={`values ${darkMode ? 'darkMode': ""}`}>Test</span>
     </p>
 </div>
 </div>
 
 Border Countries:
-<div className='border-country'>
+<div className={`border-country ${darkMode ? 'darkMode': ""}`}>
     <p>Test</p>
 </div>
-<div className='border-country'>
+<div className={`border-country ${darkMode ? 'darkMode': ""}`}>
     <p>Test</p>
 </div>
-<div className='border-country'>
+<div className={`border-country ${darkMode ? 'darkMode': ""}`}>
     <p>Test</p>
 </div>
 
