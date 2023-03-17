@@ -4,11 +4,10 @@ const CountryDetails = () => {
 
 return (
     <div className='country-details'>
-<button>
-<i class="fa fa-arrow-left back" aria-hidden="true">
+<button className=' back'>
+<i class="fa fa-arrow-left" aria-hidden="true">
 Go Back
 </i>
-    
 </button>
 
 <div className='country-details-body'>
