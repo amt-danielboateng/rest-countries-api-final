@@ -1,12 +1,18 @@
 import Header from './Header';
 import './App.css';
 import Country from './Country';
+import {Routes, Route} from 'react-router-dom';
+import CountryDetails from './CountryDetails';
 
 function App() {
   return (
     <div className="app">
       <Header />
-      <div className='app-body'>
+
+<Routes>
+
+  <Route path='/' element={
+    <div className='app-body'>
         <div className='inputs'>
           <div className='search-input'>
 <input type="text" placeholder='search for a country...' />
@@ -27,6 +33,11 @@ function App() {
         <Country />
         </div>
       </div>
+  }/>
+<Route path='country-details' element={<CountryDetails />}/>
+</Routes>
+
+      
     </div>
   );
 }
