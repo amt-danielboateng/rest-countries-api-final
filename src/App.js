@@ -55,6 +55,34 @@ const searchCountries = () => {
   }
 }
 
+const selectRegion = () => {
+  const selectValue = regionRef.current.value;
+
+  if(selectValue.trim()){
+    const fetchSelect = async() => {
+      const response = await fetch(`https://restcountries.com/v2/region/${selectValue}`);
+      const data = await response.json();
+
+      if(selectValue.trim()){
+        try{
+          fetchData()
+        }catch(error){
+          console.log(error);
+        }
+        return;
+      }
+
+      setCountries(data);
+    }
+
+    try{
+      fetchSelect()
+    }catch(error){
+      console.log(error);
+    }
+  }
+}
+
 const switchMode = () => {
   setDarkMode((prevState) => !prevState);
 }
@@ -71,7 +99,7 @@ const switchMode = () => {
 <input type="text" placeholder='search for a country...' ref={countriesInputRef} onChange={searchCountries} />
           </div>
           <div className={`select-region ${darkMode ? 'darkMode': ""}`}>
-<select ref={regionRef}>
+<select ref={regionRef} onChange={selectRegion}>
   <option>All</option>
   <option>Africa</option>
   <option>Americas</option>
